@@ -1,0 +1,32 @@
+version: "3.5"
+
+volumes:
+    data:
+
+networks:
+    upsell_network:
+        name: upsell_network
+        driver: bridge
+
+services:
+    backend:
+        build: .
+        container_name: upsell_backend
+        restart: always
+        ports:
+            - 80:80
+        networks:
+            - upsell_network
+        image: upsell_backend
+    solr:
+        image: solr:latest
+        container_name: upsell_database
+        ports:
+            - 8983:8983
+        volumes:
+            - data:/var/solr
+        command:
+            - solr-precreate
+            - gettingstarted
+        networks:
+            - upsell_network
