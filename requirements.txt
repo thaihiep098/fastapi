@@ -14,3 +14,4 @@ six~=1.15.0
 click~=7.1.2
 idna~=2.10
 setuptools~=56.0.0
+firebase_admin
