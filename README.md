@@ -1,12 +1,9 @@
-**How to build**: 
-<p>I. <b>Install Solr</b>:</p>
-    <ul><li> docker run -p 8983:8983 -t solr </li> </ul>
-
-<p>II. <b>FastAPI</b>:</p>
+**How to build**:
+<p>I. <b>FastAPI</b>:</p>
     1. Create an venv
     <ul>
-        <li>python3 -m venv upsell-env</li>
-        <li>source upsell-env/bin/activate</li>
+        <li>python3 -m venv study-env</li>
+        <li>source study-env/bin/activate</li>
     </ul>
     2. Install dependency</br>
     <ul><li> pip3 install -r requirements.txt </li> </ul>
@@ -20,6 +17,5 @@
     <ul>
         <li> API Endpoint: http://127.0.0.1:8000 </li>
         <li> Interactive API docs: http://127.0.0.1:8000/docs </li>
-        <li> Alternative API docs: http://127.0.0.1:8000/redoc </li>
     </ul>
 
